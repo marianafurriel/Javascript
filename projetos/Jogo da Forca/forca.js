@@ -48,10 +48,15 @@ function handleGuess(chosenLetter){
 		checkIfGameWon();
    }
    else if(answer.indexOf(chosenLetter) === -1){
-	   mistakes++;
-	   updateMistakes();
-	   checkIfGameLost();
-   }
+		mistakes++;
+	   	updateMistakes();
+	   	checkIfGameLost();
+		updateHangmanPicture();
+	}
+}
+
+function updateHangmanPicture(){
+	document.getElementById('hangmanPic').src = "./img/" + mistakes +".jpg";
 }
 
 function checkIfGameWon(){
@@ -62,7 +67,7 @@ function checkIfGameWon(){
 
 function checkIfGameLost(){
 	if(mistakes === maxWrong){
-		document.getElementById("wordSpotlight").innerHTML = "A resposta era: " + answer ;
+		document.getElementById("wordSpotlight").innerHTML = "A resposta era: " + answer;
 		document.getElementById('keyboard').innerHTML = "Você perdeu!";
 	}
 }
