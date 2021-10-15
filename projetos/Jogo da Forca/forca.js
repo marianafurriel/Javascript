@@ -15,38 +15,80 @@ var animais = [
     "javali"
 ]
 
-let resposta = "";
-let maxErros = 6;
-let erros = 0;
-let tentativas = [];
+let answer = "";
+let maxWrong = 6;
+let mistakes = 0;
+let guessed = [];
 let wordStatus = null;
 
-function palavraAleatoria(){
-    resposta = animais[Math.floor(Math.random() * animais.length)];
+function randomWord(){
+    answer = animais[Math.floor(Math.random() * animais.length)];
 }
 
-function gerarBotoes() {
-    let botoesHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letra =>
+function generateButtons() {
+    let buttonsHTML = 'abcdefghijklmnopqrstuvwxyz'.split('').map(letter =>
     `
       <button
         class="btn btn-lg btn-primary m-2"
-        id='` + letra + `'
-        onClick="handleGuess('` + letra + `')"
+        id='` + letter + `'
+        onClick="handleGuess('` + letter + `')"
       >
-        ` + letra + `
+        ` + letter + `
       </button>
     `).join('');
-    document.getElementById('teclado').innerHTML = botoesHTML;
+    document.getElementById('keyboard').innerHTML = buttonsHTML;
 }
 
-function palavra(){
-    wordStatus = resposta.split('').map(letra=>(tentativas.indexOf(letra) >= 0 ? letra : "_")).join(' ');
-  
+function handleGuess(chosenLetter){
+   guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
+   document.getElementById(chosenLetter).setAttribute('disabled', true);
+ 
+   if(answer.indexOf(chosenLetter) >= 0){
+	   guessedWord();
+	   alert("teste");
+		checkIfGameWon();
+   }
+   else if(answer.indexOf(chosenLetter) === -1){
+	   mistakes++;
+	   updateMistakes();
+	   checkIfGameLost();
+   }
+}
+
+function checkIfGameWon(){
+	if(wordStatus === answer){
+		document.getElementById('keyboard').innerHTML = "Você ganhou!";
+	}
+}
+
+function checkIfGameLost(){
+	if(mistakes === maxWrong){
+		document.getElementById('keyboard').innerHTML = "Você perdeu!";
+	}
+}
+
+function guessedWord(){
+    wordStatus = answer.split('').map(letter=>(guessed.indexOf(letter) >= 0 ? letter : "_")).join('');
     document.getElementById("wordSpotlight").innerHTML = wordStatus;
 }
 
-document.getElementById("maxErros").innerHTML = maxErros;
+function updateMistakes(){
+	document.getElementById('mistakes').innerHTML = mistakes;
+}
 
-palavraAleatoria();
-gerarBotoes();
-palavra();
+function reset(){
+	mistakes = 0;
+	guessed = [];
+	document.getElementById('hangmanPic').src = "./img/0.jpg";
+
+	randomWord();
+	guessedWord();
+	updateMistakes();
+	generateButtons();
+}
+
+document.getElementById("maxWrong").innerHTML = maxWrong;
+
+randomWord();
+generateButtons();
+guessedWord();
