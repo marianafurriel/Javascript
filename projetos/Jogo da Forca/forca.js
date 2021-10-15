@@ -44,8 +44,7 @@ function handleGuess(chosenLetter){
    document.getElementById(chosenLetter).setAttribute('disabled', true);
  
    if(answer.indexOf(chosenLetter) >= 0){
-	   guessedWord();
-	   alert("teste");
+	   	guessedWord();
 		checkIfGameWon();
    }
    else if(answer.indexOf(chosenLetter) === -1){
@@ -63,6 +62,7 @@ function checkIfGameWon(){
 
 function checkIfGameLost(){
 	if(mistakes === maxWrong){
+		document.getElementById("wordSpotlight").innerHTML = "A resposta era: " + answer ;
 		document.getElementById('keyboard').innerHTML = "Você perdeu!";
 	}
 }
