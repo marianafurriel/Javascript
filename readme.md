@@ -1,4 +1,6 @@
-# Projetos pequenos para aplicar meu aprendizado em JavaScript
+# JavaScript
+
+## Projetos pequenos para aplicar meu aprendizado em Javascript
 
 ### Timer
 Um timer simpĺes usando callback. [clique aqui](https://github.com/MarianaFurriel/Javascript/blob/master/projetos/timer.js)
