@@ -1,0 +1,14 @@
+.container {
+    margin: auto;
+    width: 35%;
+    border: 1px solid rgb(122, 121, 121);
+    text-align: center;
+    padding: 10px;
+    margin-top: 8%;
+    border-radius: 10px;
+}
+
+#mensagem{
+    color: rgb(209, 49, 49);
+    display: none;
+}
