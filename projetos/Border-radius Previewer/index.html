@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>  
+    <!-- <div id="formulario">
+        Top left: <input type="text" name="topLeft" id="topLeft" onkeyup="calculaBorda()">px<br>
+        Top right:<input type="text" name="topRight" id="topRight" onkeyup="calculaBorda()">px<br>
+        Bottom left: <input type="text" name="botLeft" id="botLeft" onkeyup="calculaBorda()">px<br>
+        Bottom right: <input type="text" name="botRight" id="botRight" onkeyup="calculaBorda()">px<br>
+        <input type="reset" onclick="limpar()" value="Limpar">
+    </div>    -->
+    
+    <div id="container">
+        <div id="entrada">
+            Top left: <input type="text" name="topLeft" id="topLeft" onkeyup="borda()">px<br>
+            Top right: <input type="text" name="topRight" id="topRight" onkeyup="borda()">px<br>
+            Bottom right: <input type="text" name="botRight" id="botRight" onkeyup="borda()">px<br>
+            Bottom left: <input type="text" name="botLeft" id="botLeft" onkeyup="borda()">px<br>
+            <input type="button" onclick="limpar()" value="Limpar">
+        </div>
+        
+        <div id="texto">
+            <span id="topL"></span>
+            <span id="topR"></span>
+            <span id="botR"></span>
+            <span id="botL"></span>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="brpp.js"></script> 
+</body>
+</html>
