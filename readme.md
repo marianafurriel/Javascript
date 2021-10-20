@@ -2,8 +2,8 @@
 
 ## Projetos pequenos para aplicar meu aprendizado em Javascript
 
-### [Timer](https://github.com/MarianaFurriel/Javascript/blob/master/projetos/timer.js)
-Um timer simpĺes usando callback, feito para rodar no console. 
+<!-- ### [Timer](https://github.com/MarianaFurriel/Javascript/blob/master/projetos/timer.js)
+Um timer simpĺes usando callback, feito para rodar no console. -->
 
 ### [Jogo da forca](https://github.com/MarianaFurriel/Javascript/tree/master/projetos/Jogo%20da%20Forca)
 Jogo da forca simples, usando Javascript puro (além de HTML e CSS). Fiz junto com [este tutorial](https://www.youtube.com/watch?v=dgvyE1sJS3Y) para fixar a sintaxe da linguagem e fazer algo concreto ao mesmo tempo.
