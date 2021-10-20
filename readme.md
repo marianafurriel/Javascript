@@ -5,16 +5,16 @@
 <!-- ### [Timer](https://github.com/MarianaFurriel/Javascript/blob/master/projetos/timer.js)
 Um timer simpĺes usando callback, feito para rodar no console. -->
 
-### [Jogo da forca](https://github.com/MarianaFurriel/Javascript/tree/master/projetos/Jogo%20da%20Forca)
+### [Jogo da forca](https://github.com/MarianaFurriel/Javascript/tree/master/Jogo%20da%20Forca)
 Jogo da forca simples, usando Javascript puro (além de HTML e CSS). Fiz junto com [este tutorial](https://www.youtube.com/watch?v=dgvyE1sJS3Y) para fixar a sintaxe da linguagem e fazer algo concreto ao mesmo tempo.
 
-### [Bin2Dec](https://github.com/MarianaFurriel/Javascript/tree/master/projetos/bin2dec)
+### [Bin2Dec](https://github.com/MarianaFurriel/Javascript/tree/master/bin2dec)
 Um conversor de binário para decimal, usando puro Javascript (além de HTML e CSS). Ideia e regras retiradas [daqui](https://github.com/florinpop17/app-ideas).
 
-### [Border Radius Previewer](https://github.com/MarianaFurriel/Javascript/tree/master/projetos/Border-radius%20Previewer)
+### [Border Radius Previewer](https://github.com/MarianaFurriel/Javascript/tree/master/Border%20Radius%20Previewer)
 Um pré-visualizador de bordas redondas feito em Javascript, HTML e CSS. Ideia e regras retiradas [daqui](https://github.com/florinpop17/app-ideas)
 
-### [Calculadora](https://github.com/MarianaFurriel/Javascript/tree/master/projetos/Border-radius%20Previewer) (WIP)
+### [Calculadora](https://github.com/MarianaFurriel/Javascript/tree/master/Calculadora) (WIP)
 Calculadora usando Javascript, HTML e CSS. Ainda em desenvolvimento. Ideia e regras retiradas [daqui](https://github.com/florinpop17/app-ideas)
 
 
