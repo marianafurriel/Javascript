@@ -10,33 +10,34 @@
 <body>
     <div id="container">
         <div id="calculadora">
-            <input type="text" id="tela" readonly>
+            <input type="text" id="tela" value=" " readonly>
            <div id="primLinha">
-                <button onclick="botao()">7</button>
-                <button onclick="botao()">8</button>
-                <button onclick="botao()">9</button>
-                <button onclick="botao()">/</button>
+                <button onclick="numeros(7)">7</button>
+                <button onclick="numeros(8)">8</button>
+                <button onclick="numeros(9)">9</button>
+                <button onclick="operador('/')">/</button>
                     
             </div>
             <div id="segLinha">
-                <button onclick="botao()">4</button>
-                <button onclick="botao()">5</button>
-                <button onclick="botao()">6</button>
-                <button onclick="botao()">*</button><br>
+                <button onclick="numeros(4)">4</button>
+                <button onclick="numeros(5)">5</button>
+                <button onclick="numeros(6)">6</button>
+                <button onclick="operador('*')">*</button><br>
             </div>
                 
             <div id="tercLinha">
-                <button onclick="botao()">1</button>
-                <button onclick="botao()">2</button>
-                <button onclick="botao()">3</button>
-                <button onclick="botao()">-</button><br>
+                <button onclick="numeros(1)">1</button>
+                <button onclick="numeros(2)">2</button>
+                <button onclick="numeros(3)">3</button>
+                <button onclick="operador('-')">-</button><br>
             </div>
             <div id="quaLinha">
-                <button id="zero" onclick="bota()">0</button>
-                <button onclick="botao()">=</button>
-                <buttono nclick="botao()">+</button><br>
+                <button id="zero" onclick="numeros(0)">0</button>
+                <button onclick="calcula()">=</button>
+                <button onclick="operador('+')">+</button>
             </div>
         </div> 
     </div>
+    <script src="calculadora.js"></script>
 </body>
 </html>
