@@ -14,8 +14,8 @@ Um conversor de binário para decimal, usando puro Javascript (além de HTML e C
 ### [Border Radius Previewer](https://github.com/MarianaFurriel/Javascript/tree/master/Border%20Radius%20Previewer)
 Um pré-visualizador de bordas redondas feito em Javascript, HTML e CSS. Ideia e regras retiradas [daqui](https://github.com/florinpop17/app-ideas)
 
-### [Calculadora](https://github.com/MarianaFurriel/Javascript/tree/master/Calculadora) (WIP)
-Calculadora usando Javascript, HTML e CSS. Ainda em desenvolvimento. Ideia e regras retiradas [daqui](https://github.com/florinpop17/app-ideas)
+### [Calculadora](https://github.com/MarianaFurriel/Javascript/tree/master/Calculadora)
+Calculadora de naturais usando Javascript, HTML e CSS. Ideia e regras retiradas [daqui](https://github.com/florinpop17/app-ideas)
 
 
 
