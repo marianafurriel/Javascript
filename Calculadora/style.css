@@ -1,13 +1,14 @@
 #container{
     margin: auto;
     width: 50%;
-    border: 2px solid rgb(0, 0, 0);
     text-align: center;
     margin-top: 6%;
-    width:  350px;
+    width:  220px;
     height: 350px;
 }
-
+#calculadora{
+    border: 2px solid rgb(110, 94, 202);
+}
 #tela{
     margin: auto;
     margin-bottom: 10px;
@@ -24,6 +25,10 @@ button{
     margin-bottom:10px;
 }
 
-#zero{
-    width: 100px;
+#botaoMaior{
+    width: 105px;
+}
+
+#quiLinha{
+    margin-bottom: -10px;
 }

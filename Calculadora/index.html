@@ -12,27 +12,30 @@
         <div id="calculadora">
             <input type="text" id="tela" value=" " readonly>
            <div id="primLinha">
+               <button onclick="limparTudo()" id="botaoMaior">AC</button>
+               <button onclick="limpar()" id="botaoMaior">C</button>               
+            </div>
+        <div id="segLinha">
                 <button onclick="numeros(7)">7</button>
                 <button onclick="numeros(8)">8</button>
                 <button onclick="numeros(9)">9</button>
                 <button onclick="operador('/')">/</button>
-                    
             </div>
-            <div id="segLinha">
+            
+            <div id="tercLinha">
                 <button onclick="numeros(4)">4</button>
                 <button onclick="numeros(5)">5</button>
                 <button onclick="numeros(6)">6</button>
                 <button onclick="operador('*')">*</button><br>
             </div>
-                
-            <div id="tercLinha">
+            <div id="quaLinha">
                 <button onclick="numeros(1)">1</button>
                 <button onclick="numeros(2)">2</button>
                 <button onclick="numeros(3)">3</button>
                 <button onclick="operador('-')">-</button><br>
             </div>
-            <div id="quaLinha">
-                <button id="zero" onclick="numeros(0)">0</button>
+            <div id="quiLinha">
+                <button id="botaoMaior" onclick="numeros(0)">0</button>
                 <button onclick="calcula()">=</button>
                 <button onclick="operador('+')">+</button>
             </div>

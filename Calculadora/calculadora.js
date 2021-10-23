@@ -1,54 +1,52 @@
 let numero = [];
 let operacao = 0;
-let valores = [];
+let memoria = [];
 let visor = document.getElementById("tela");
-let expressao = [];
+let temp = 0;
+
 
 function numeros(valor){
+    if((visor.value ==0) || visor.value == memoria[memoria.length-1]) visor.value = "";
     if(numero.length == 8){}
     else{
         numero.push(valor);
-        //alteraVisor(valor);
+        visor.value += valor; 
     }
 }
 
 function operador(operador){
+    visor.value = "";
     if(operacao==0){
         operacao = operador;
         if(numero.length>0){
-            valores.push(parseInt(numero.join("")));
+            memoria.push(numero.join(""));
             numero = [];
         }
-       // alteraVisor(operacao);
     }
 }
 
 function calcula(){
     if(numero.length>0){
-        valores.push(parseInt(numero.join("")));
+        memoria.push(numero.join(""));
         numero = [];
     }
 
     switch (operacao) {
         case '-':
-            console.log((valores[(valores.length -2)] - valores[(valores.length -1)]));
-            visor.value = (valores[(valores.length -2)] - valores[(valores.length -1)]); 
-            valores.push(parseInt(visor.value));
+            temp = parseInt((meoria[(memoria.length -2)]) - parseInt(memoria[(memoria.length -1)])); 
+            testaErro(temp);
             break;
         case '+':
-            console.log((valores[(valores.length -2)]) + (valores[(valores.length -1)]));
-            visor.value = (parseInt((valores[(valores.length -2)])) + (parseInt(valores[(valores.length -1)]))); 
-            valores.push(parseInt(visor.value));
+           temp = parseInt(memoria[(memoria.length -2)]) + parseInt(memoria[(memoria.length -1)]); 
+            testaErro(temp);
             break;
         case '*':
-            console.log(valores[(valores.length -2)] * valores[(valores.length -1)]);
-            visor.value = (valores[(valores.length -2)] * valores[(valores.length -1)]);
-            valores.push(parseInt(visor.value));
+            temp = parseInt(memoria[(memoria.length -2)]) * parseInt(memoria[(memoria.length -1)]);
+            testaErro(temp);
             break;
         case '/':
-            console.log(valores[(valores.length -2)] / valores[(valores.length -1)]);
-            visor.value = (valores[(valores.length -2)] / valores[(valores.length -1)]); 
-            valores.push(parseInt(visor.value));
+            temp = parseInt(memoria[(memoria.length -2)]) / parseInt(memoria[(memoria.length -1)]); 
+            testaErro(temp);
             break;
         default:
             break;
@@ -56,8 +54,45 @@ function calcula(){
     operacao=0;
 }
 
-// function alteraVisor(){
-//     expressao.push()
-//     visor.value = ;
-// 
-//}
+function limpar(){
+    console.log(operacao);
+    console.log(numero.length)
+    if(memoria.length>0){
+        if((operacao!=0) &&(numero.length==0)){
+            operacao = 0;
+            visor.value = memoria[memoria.length-1];
+            numero = memoria[memoria.length-1].toString().split('');
+            console.log("numero"+numero);
+           
+        }
+        else{
+            console.log("else")    
+            numero.pop()
+            console.log(numero)
+            visor.value = numero.join("");
+        }
+    }
+    else{
+        console.log("else")    
+        numero.pop()
+        console.log(numero)
+        visor.value = numero.join("");
+    }
+}
+
+function limparTudo(){
+    memoria = []
+    numero = []
+    operacao = 0
+    visor.value = 0;
+}
+
+function testaErro(resultado){
+    if(resultado.toString().split('').length >8){
+        visor.value = "ERR";
+    }
+    else{
+        visor.value = resultado;
+        memoria.push(resultado);
+    }
+}
